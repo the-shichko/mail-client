@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Text;
+using mail_client.Services;
 
 namespace mail_client
 {
@@ -6,7 +8,9 @@ namespace mail_client
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.OutputEncoding = Encoding.UTF8;
+            var client = new MailClientService("login@caspel.by", "password");
+            Console.ReadKey();
         }
     }
 }
